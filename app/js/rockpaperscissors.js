@@ -25,14 +25,37 @@ function getPlayerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
+    if (move === "rock"){
+    	return "rock";
+    }
+    elseif (move === "paper"){
+    	return "paper"
+    }
+    elseif (move === "scissors"){
+    	return "scissors"
+    }
+    else {
+    	return getInput()
+    }
 }
 
 function getComputerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+    
+    if (move === "rock") {
+    	return "rock"
+    }
+	elseif (move === "paper"){
+		return "paper"
+	}
+	elseif (move === "scissors"){
+    	return "scissors"
+    }
+    else {
+    return randomPlay()
+    }
 }
 
 function getWinner(playerMove,computerMove) {
@@ -41,6 +64,20 @@ function getWinner(playerMove,computerMove) {
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
     /* YOUR CODE HERE */
+    if (playerMove === computerMove)
+    	return "Tie"
+    else if(playerMove === "rock"){
+    	if(computerMove === "scissors"){
+    		return "Rock beats scissors"
+    	}
+    	else{
+    		"Paper beats rock"
+    else if(playerMove === "paper"){
+    	if(choice2 === "rock") {
+    		return "Paper beats rock"
+    	}
+    	else{
+    		return "Scissors beats paper"
     return winner;
 }
 
@@ -49,7 +86,7 @@ function playToFive() {
     var playerWins = 0;
     var computerWins = 0;
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
-    /* YOUR CODE HERE */
+    Until(
     return [playerWins, computerWins];
 }
 
